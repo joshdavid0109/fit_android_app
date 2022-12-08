@@ -18,10 +18,12 @@ public class WorkoutAbsTimer extends AppCompatActivity {
 
     Animation timeranim;
     ImageView timericanchor, abGifView;
-    TextView abExercisesTextView,abRepsTextView,abNextExercise;
+    TextView abExercisesTextView,abRepsTextView;
     static Button startButtAbs1,nextWorkoutButt;
     Chronometer timerAbs1;
 
+
+    static int reportCode = 0;
     static int currentAbExercise;
     static int currentAbRep;
     static int currentImage;
@@ -43,9 +45,17 @@ public class WorkoutAbsTimer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
            setContentView(R.layout.activity_workout_abs_timer);
 
-        currentAbExercise = getIntent().getIntExtra("current exercise", 0);
-        currentAbRep = getIntent().getIntExtra("current ab rep", 0);
-        currentImage = getIntent().getIntExtra("current image", 0);
+           if (reportCode != 0) {
+               currentAbExercise++;
+               currentAbRep++;
+               currentImage++;
+
+               currentImage = currentImage % abGifs.length;
+               currentAbExercise = currentAbExercise % abExercisesLength;
+               currentAbRep= currentAbRep % abRepLength;
+
+           }
+
 
            startButtAbs1 = findViewById(R.id.startAbsTimer1);
            nextWorkoutButt = findViewById(R.id.nextAbsWorkout);
@@ -62,6 +72,9 @@ public class WorkoutAbsTimer extends AppCompatActivity {
             timeranim = AnimationUtils.loadAnimation(this,R.anim.timeranim);
 
 
+            abExercisesTextView.setText(abExercises[currentAbExercise]);
+            abRepsTextView.setText(abRep[currentAbRep]);
+            abGifView.setImageResource(abGifs[currentImage]);
 
             startButtAbs1.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -79,19 +92,8 @@ public class WorkoutAbsTimer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                currentAbExercise++;
-                currentAbRep++;
-                currentImage++;
 
-                currentImage = currentImage % abGifs.length;
-                currentAbExercise = currentAbExercise % abExercisesLength;
-                currentAbRep= currentAbRep % abRepLength;
 
-                abExercisesTextView.setText(abExercises[currentAbExercise]);
-
-                // check if tama
-                abRepsTextView.setText(abRep[currentAbRep]);
-                abGifView.setImageResource(abGifs[currentImage]);
 
                 GoToWorkoutRest();
             }
@@ -99,16 +101,7 @@ public class WorkoutAbsTimer extends AppCompatActivity {
     }
 
     public void GoToWorkoutRest() {
-
-        String getAbExercise = abExercises[currentAbExercise];
-        String getAbReps = abRep[currentAbRep];
-        int getAbGifView = abGifs[currentImage];
-
         Intent intent = new Intent(this, WorkoutRest.class);
-        intent.putExtra("current exercise", getAbExercise);
-        intent.putExtra("current ab rep", getAbReps);
-        intent.putExtra("current image", getAbGifView);
-
         startActivity(intent);
     }
 }

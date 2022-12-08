@@ -1,5 +1,7 @@
 package com.example.gymprogs2224514;
 
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCode;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class WorkoutRest extends AppCompatActivity {
 
     long restDuration = TimeUnit.MINUTES.toMillis(1);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,16 +63,8 @@ public class WorkoutRest extends AppCompatActivity {
     }
 
     public void GoBackToWorkoutAbsTimer() {
-
-        int currentExercise = getIntent().getIntExtra("current exercise", 0);
-        int currentAbRep = getIntent().getIntExtra("current ab rep", 0);
-        int currentImage = getIntent().getIntExtra("current image", 0);
-
         Intent intent = new Intent(this, WorkoutAbsTimer.class);
-
-        intent.putExtra("current exercise", currentExercise);
-        intent.putExtra("current ab rep", currentAbRep);
-        intent.putExtra("current image", currentImage);
+        reportCode++;
         startActivity(intent);
     }
 }
