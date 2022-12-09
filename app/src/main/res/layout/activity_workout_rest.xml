@@ -46,10 +46,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719" />
+        app:layout_constraintVertical_bias="0.743" />
 
     <TextView
         android:id="@+id/timer30Second"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.643" />
 
     <TextView
-        android:id="@+id/nextExerciseAbs"
+        android:id="@+id/nextAbsExercise"
         android:layout_width="171dp"
         android:layout_height="40dp"
         android:fontFamily="@font/segoe"
@@ -80,10 +80,10 @@
         app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.777" />
 
     <Button
-        android:id="@+id/nextAbsWorkout2"
+        android:id="@+id/nextWorkout"
         android:layout_width="173dp"
         android:layout_height="74dp"
         android:backgroundTint="#203864"

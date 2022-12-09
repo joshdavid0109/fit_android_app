@@ -10,15 +10,15 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/abGifView"
-        android:layout_width="336dp"
-        android:layout_height="398dp"
+        android:layout_width="412dp"
+        android:layout_height="315dp"
         android:src="@drawable/absexercise1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/timericanchor"
-        app:layout_constraintVertical_bias="0.912" />
+        app:layout_constraintVertical_bias="0.858" />
 
     <ImageView
         android:id="@+id/rectanglegod14"
@@ -49,7 +49,7 @@
         app:layout_constraintVertical_bias="0.512" />
 
     <TextView
-        android:id="@+id/absExerciseText"
+        android:id="@+id/absExcerciseText"
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
@@ -65,7 +65,7 @@
         app:layout_constraintVertical_bias="0.483" />
 
     <Chronometer
-        android:id="@+id/timerAbs1"
+        android:id="@+id/timerAbs"
         android:layout_width="220dp"
         android:layout_height="75dp"
         android:textAlignment="center"

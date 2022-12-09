@@ -1,6 +1,13 @@
 package com.example.gymprogs2224514;
 
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCode;
+import static com.example.gymprogs2224514.WorkoutAbs.launchState;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.currentAbExercise;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeAbs;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeChest;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeBack;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeArms;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeLegs;
+import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeShoulder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,17 +26,64 @@ public class WorkoutRest extends AppCompatActivity {
 
     long restDuration = TimeUnit.MINUTES.toMillis(1);
 
+    // Initialize next exercises
+    String[] abExercises = {"RUSSIAN TWISTS",
+            "MOUNTAIN CLIMBERS","LEG RAISES","PLANK"};
+
+    String[] armExercises = { "SKULL CRUSHERS",
+            "SEATED WRIST CURLS", "TATE PRESS", "TWISTING DUMBBELL CURL"};
+
+    String[] backExercises = { "CHEST SUPPORTED DUMBBELL ROW",
+            "DUMBBELL SINGLE ARM ROW", "SINGLE ARM T BAR ROWS", "LAT PULLDOWN"};
+
+    String[] chestExercises = {"DUMBBELL BENCH PRESS",
+            "DUMBBELL CLOSE GRIP PRESS", "INCLINE DUMBBELL PRESS", "SEATED CHEST FLY"};
+
+    String[] legsExercises = {"BULGARIAN SPLIT SQUAT",
+            "HAMSTRING CURLS", "LEG EXTENSION", "CALF RAISE"};
+
+    String[] shoulderExercises = {"DUMBBELL FRONT RAISE",
+            "LATERAL RAISE", "MILITARY PRESS", "SEATED SHOULDER PRESS"};
+
+    TextView timer, nextAbsExercise;
+    Button nextWorkout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_rest);
 
-        TextView timer;
-        Button nextAbsWorkout2;
-
         timer = findViewById(R.id.timer30Second);
-        nextAbsWorkout2 = findViewById(R.id.nextAbsWorkout2);
+        nextWorkout = findViewById(R.id.nextWorkout);
+        nextAbsExercise = findViewById(R.id.nextAbsExercise);
+
+        switch (launchState) {
+            case 1:
+                nextAbsExercise.setText(abExercises[currentAbExercise]);
+                break;
+
+            case 2:
+                nextAbsExercise.setText(armExercises[currentAbExercise]);
+                break;
+
+            case 3:
+                nextAbsExercise.setText(backExercises[currentAbExercise]);
+                break;
+
+            case 4:
+                nextAbsExercise.setText(chestExercises[currentAbExercise]);
+                break;
+
+            case 5:
+                nextAbsExercise.setText(legsExercises[currentAbExercise]);
+                break;
+
+            case 6:
+                nextAbsExercise.setText(shoulderExercises[currentAbExercise]);
+                break;
+
+        }
+
 
         new CountDownTimer(restDuration, 1000) {
             @Override
@@ -46,7 +100,6 @@ public class WorkoutRest extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-
                 timer.setVisibility(View.GONE);
 
                 Toast.makeText(getApplicationContext()
@@ -54,17 +107,58 @@ public class WorkoutRest extends AppCompatActivity {
             }
         }.start();
 
-        nextAbsWorkout2.setOnClickListener(new View.OnClickListener() {
+        nextWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GoBackToWorkoutAbsTimer();
+                GoBackToWorkoutTimer();
             }
         });
     }
 
-    public void GoBackToWorkoutAbsTimer() {
-        Intent intent = new Intent(this, WorkoutAbsTimer.class);
-        reportCode++;
-        startActivity(intent);
+    public void GoBackToWorkoutTimer() {
+        Intent intent = new Intent(this,WorkoutAbsTimer.class);
+
+        switch (launchState) {
+            case 1:
+                reportCodeAbs++;
+                startActivity(intent);
+
+                break;
+            case 2:
+                reportCodeArms++;
+                startActivity(intent);
+
+                break;
+
+
+            case 3:
+                reportCodeBack++;
+                startActivity(intent);
+
+                break;
+
+
+            case 4:
+                reportCodeChest++;
+                startActivity(intent);
+
+                break;
+
+            case 5:
+                reportCodeLegs++;
+                startActivity(intent);
+
+                break;
+
+            case 6:
+                reportCodeShoulder++;
+                startActivity(intent);
+
+                break;
+        }
+
+
+
+
     }
 }

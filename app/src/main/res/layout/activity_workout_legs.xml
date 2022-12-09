@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/absStartButt5"
+        android:id="@+id/legsStartButt"
         android:layout_width="180dp"
         android:layout_height="45dp"
         android:layout_marginTop="688dp"

@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 public class WorkoutAbs extends AppCompatActivity {
 
     Button startAbsWorkoutButt1;
+    public static int launchState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class WorkoutAbs extends AppCompatActivity {
 
     public void GoToWorkoutAbsTimer1() {
         Intent intent = new Intent(this, WorkoutAbsTimer.class);
+        launchState = 1;
         startActivity(intent);
     }
 }
