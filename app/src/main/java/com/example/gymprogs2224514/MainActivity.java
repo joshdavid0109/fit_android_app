@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button viewAllButt = findViewById(R.id.viewAllButton);
+        ImageButton mainProgram = findViewById(R.id.mainProgram);
         ImageButton absWorkButt = findViewById(R.id.absWorkButt);
         ImageButton chestWorkButt = findViewById(R.id.chestWorkButt);
         ImageButton shoulderWorkButt = findViewById(R.id.shoulderWorkButt);
@@ -24,10 +25,18 @@ public class MainActivity extends AppCompatActivity {
         ImageButton legsWorkButt = findViewById(R.id.legsWorkButt);
         ImageButton armsWorkButt = findViewById(R.id.armsWorkButt);
 
+
         viewAllButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 activityViewAll();
+            }
+        });
+
+        mainProgram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToMainProgram();
             }
         });
 
@@ -59,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         legsWorkButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void activityViewAll() {
         Intent intent = new Intent(this, ViewAllProgramsActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToMainProgram() {
+        Intent intent = new Intent(this, ViewAllProgramsHIIT.class);
         startActivity(intent);
     }
 

@@ -1,13 +1,13 @@
 package com.example.gymprogs2224514;
 
 import static com.example.gymprogs2224514.WorkoutAbs.launchState;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.currentAbExercise;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeAbs;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeChest;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeBack;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeArms;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeLegs;
-import static com.example.gymprogs2224514.WorkoutAbsTimer.reportCodeShoulder;
+import static com.example.gymprogs2224514.WorkoutTimer.currentAbExercise;
+import static com.example.gymprogs2224514.WorkoutTimer.reportCodeAbs;
+import static com.example.gymprogs2224514.WorkoutTimer.reportCodeChest;
+import static com.example.gymprogs2224514.WorkoutTimer.reportCodeBack;
+import static com.example.gymprogs2224514.WorkoutTimer.reportCodeArms;
+import static com.example.gymprogs2224514.WorkoutTimer.reportCodeLegs;
+import static com.example.gymprogs2224514.WorkoutTimer.reportCodeShoulder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,12 +28,12 @@ public class WorkoutRest extends AppCompatActivity {
 
     // Initialize next exercises
     String[] abExercises = {"RUSSIAN TWISTS",
-            "MOUNTAIN CLIMBERS","LEG RAISES","PLANK"};
+            "MOUNTAIN CLIMBERS", "LEG RAISES", "PLANK"};
 
-    String[] armExercises = { "SKULL CRUSHERS",
+    String[] armExercises = {"SKULL CRUSHERS",
             "SEATED WRIST CURLS", "TATE PRESS", "TWISTING DUMBBELL CURL"};
 
-    String[] backExercises = { "CHEST SUPPORTED DUMBBELL ROW",
+    String[] backExercises = {"CHEST SUPPORTED DUMBBELL ROW",
             "DUMBBELL SINGLE ARM ROW", "SINGLE ARM T BAR ROWS", "LAT PULLDOWN"};
 
     String[] chestExercises = {"DUMBBELL BENCH PRESS",
@@ -90,12 +90,12 @@ public class WorkoutRest extends AppCompatActivity {
             public void onTick(long l) {
 
                 // Convert Millisecond to minute and seconds
-                String sDuration = String.format(Locale.ENGLISH,"%02d : %02d",
+                String sDuration = String.format(Locale.ENGLISH, "%02d : %02d",
                         TimeUnit.MILLISECONDS.toMinutes(1),
                         TimeUnit.MILLISECONDS.toSeconds(1) - TimeUnit.MINUTES.toSeconds
                                 (TimeUnit.MILLISECONDS.toMinutes(1)));
 
-                        timer.setText(sDuration);
+                timer.setText(sDuration);
             }
 
             @Override
@@ -103,7 +103,7 @@ public class WorkoutRest extends AppCompatActivity {
                 timer.setVisibility(View.GONE);
 
                 Toast.makeText(getApplicationContext()
-                , "Rest has ended", Toast.LENGTH_LONG).show();
+                        , "Rest has ended", Toast.LENGTH_LONG).show();
             }
         }.start();
 
@@ -116,7 +116,7 @@ public class WorkoutRest extends AppCompatActivity {
     }
 
     public void GoBackToWorkoutTimer() {
-        Intent intent = new Intent(this,WorkoutAbsTimer.class);
+        Intent intent = new Intent(this, WorkoutTimer.class);
 
         switch (launchState) {
             case 1:
@@ -129,7 +129,6 @@ public class WorkoutRest extends AppCompatActivity {
                 startActivity(intent);
 
                 break;
-
 
             case 3:
                 reportCodeBack++;
@@ -156,8 +155,6 @@ public class WorkoutRest extends AppCompatActivity {
 
                 break;
         }
-
-
 
 
     }

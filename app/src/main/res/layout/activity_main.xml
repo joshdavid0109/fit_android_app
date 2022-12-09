@@ -74,7 +74,7 @@
             android:layout_width="0dp"
             android:layout_height="175dp"
             android:layout_marginStart="17dp"
-            android:layout_marginTop="215dp"
+            android:layout_marginTop="200dp"
             android:layout_marginEnd="17dp"
             android:layout_marginBottom="213dp"
             android:adjustViewBounds="true"
@@ -170,7 +170,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
-            android:id="@+id/hiitButton"
+            android:id="@+id/mainProgram"
             android:layout_width="0dp"
             android:layout_height="171dp"
             android:layout_marginStart="19dp"
@@ -199,7 +199,7 @@
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/hiitButton"
+            app:layout_constraintStart_toStartOf="@+id/mainProgram"
             app:layout_constraintTop_toTopOf="@+id/rectanglegod3" />
 
         <TextView
@@ -227,7 +227,7 @@
             android:text="View All"
             android:textColor="#FFFFFF"
             app:iconTint="#858585"
-            app:layout_constraintBottom_toTopOf="@+id/hiitButton"
+            app:layout_constraintBottom_toTopOf="@+id/mainProgram"
             app:layout_constraintEnd_toEndOf="parent"
             app:strokeColor="#858585" />
 
@@ -287,7 +287,7 @@
             app:layout_constraintEnd_toEndOf="@+id/rectanglegod3"
             app:layout_constraintHorizontal_bias="0.023"
             app:layout_constraintStart_toStartOf="@+id/textView7"
-            app:layout_constraintTop_toTopOf="@+id/hiitButton"
+            app:layout_constraintTop_toTopOf="@+id/mainProgram"
             app:layout_constraintVertical_bias="0.4" />
 
         <TextView

@@ -97,7 +97,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".WorkoutAbsTimer"
+            android:name=".WorkoutTimer"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

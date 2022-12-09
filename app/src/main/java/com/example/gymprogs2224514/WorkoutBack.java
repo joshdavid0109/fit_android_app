@@ -44,7 +44,7 @@ public class WorkoutBack extends AppCompatActivity {
     }
 
     public void GoToWorkoutTimer() {
-        Intent intent = new Intent(this, WorkoutAbsTimer.class);
+        Intent intent = new Intent(this, WorkoutTimer.class);
         launchState = 3;
         startActivity(intent);
     }

@@ -42,7 +42,7 @@ public class WorkoutAbs extends AppCompatActivity {
     }
 
     public void GoToWorkoutAbsTimer1() {
-        Intent intent = new Intent(this, WorkoutAbsTimer.class);
+        Intent intent = new Intent(this, WorkoutTimer.class);
         launchState = 1;
         startActivity(intent);
     }

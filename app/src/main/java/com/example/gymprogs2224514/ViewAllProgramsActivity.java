@@ -16,7 +16,7 @@ public class ViewAllProgramsActivity extends AppCompatActivity {
 
         ImageButton backButt = findViewById(R.id.backButton);
         ImageButton qMarkPrograms = findViewById(R.id.qMarkPrograms);
-        ImageButton hiitButt = findViewById(R.id.hiitButton);
+        ImageButton hiitButt = findViewById(R.id.mainProgram);
         ImageButton weightButt = findViewById(R.id.weightButt);
         ImageButton muscleButt = findViewById(R.id.muscleButt);
         ImageButton strengthButt = findViewById(R.id.strengthButt);

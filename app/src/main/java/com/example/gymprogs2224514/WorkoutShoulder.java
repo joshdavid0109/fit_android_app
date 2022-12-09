@@ -40,7 +40,7 @@ public class WorkoutShoulder extends AppCompatActivity {
     }
 
     public void GoToWorkoutShoulderTimer() {
-        Intent intent = new Intent(this,WorkoutAbsTimer.class);
+        Intent intent = new Intent(this, WorkoutTimer.class);
         launchState = 6;
         startActivity(intent);
     }

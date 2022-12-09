@@ -40,7 +40,7 @@ public class WorkoutChest extends AppCompatActivity {
     }
 
     public void GoToWorkoutChestTimer() {
-        Intent intent = new Intent(this, WorkoutAbsTimer.class);
+        Intent intent = new Intent(this, WorkoutTimer.class);
         launchState = 4;
         startActivity(intent);
     }

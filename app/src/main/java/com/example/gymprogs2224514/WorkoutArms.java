@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import static com.example.gymprogs2224514.WorkoutAbs.launchState;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +43,7 @@ public class WorkoutArms extends AppCompatActivity {
     }
 
     public void GoToWorkoutArmTimer() {
-        Intent intent = new Intent(this, WorkoutAbsTimer.class);
+        Intent intent = new Intent(this, WorkoutTimer.class);
         launchState = 2;
         startActivity(intent);
     }

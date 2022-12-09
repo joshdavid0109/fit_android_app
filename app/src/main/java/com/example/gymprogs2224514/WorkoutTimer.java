@@ -15,7 +15,7 @@ import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class WorkoutAbsTimer extends AppCompatActivity {
+public class WorkoutTimer extends AppCompatActivity {
 
     Animation timeranim;
     ImageView timericanchor, abGifView;
@@ -97,8 +97,8 @@ public class WorkoutAbsTimer extends AppCompatActivity {
     int[] legsGifs = {R.drawable.legsexercise1, R.drawable.legsexercise2, R.drawable.legsexercise3,
             R.drawable.legsexercise4, R.drawable.legsexercise5};
 
-    int[] shoulderGifs = {R.drawable.shoulderexercise1, R.drawable.shoulderexercise2, R.drawable.shoulderexercise3,
-            R.drawable.shoulderexercise4, R.drawable.shoulderexercise5};
+    int[] shoulderGifs = {R.drawable.shoulderexercise1, R.drawable.shoulderexercise2,
+            R.drawable.shoulderexercise3, R.drawable.shoulderexercise4, R.drawable.shoulderexercise5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,11 +124,11 @@ public class WorkoutAbsTimer extends AppCompatActivity {
         /*
         Launch States
 
-        Abs = 1
-        Arms = 2
-        Back = 3
-        Chest = 4
-        Legs = 5
+        Abs = [1]
+        Arms = [2]
+        Back = [3]
+        Chest = [4]
+        Legs = [5]
          */
 
         switch (launchState) {
@@ -182,7 +182,7 @@ public class WorkoutAbsTimer extends AppCompatActivity {
                 break;
         }
 
-        // Check if reportCode is != 0
+        // Check if reportCode has value
         if (reportCodeAbs != 0) {
             currentAbExercise++;
             currentAbRep++;
@@ -251,9 +251,9 @@ public class WorkoutAbsTimer extends AppCompatActivity {
             currentAbRep++;
             currentImage++;
 
-            currentImage = currentImage % legsGifs.length;
-            currentAbExercise = currentAbExercise % legsExercisesLength;
-            currentAbRep = currentAbRep % legsRepLength;
+            currentImage = currentImage % shoulderGifs.length;
+            currentAbExercise = currentAbExercise % shoulderExercisesLength;
+            currentAbRep = currentAbRep % shoulderRepLength;
 
             abExercisesTextView.setText(shoulderExercises[currentAbExercise]);
             abRepsTextView.setText(shoulderRep[currentAbRep]);
