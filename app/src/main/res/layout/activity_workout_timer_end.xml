@@ -7,22 +7,16 @@
     android:background="#404040"
     tools:context=".WorkoutTimerEnd">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/endWorkoutPic"
-        android:layout_width="485dp"
-        android:layout_height="154dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#404040"
-        android:cropToPadding="true"
-        android:scaleType="centerCrop"
+        android:layout_width="454dp"
+        android:layout_height="208dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/gympic2"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <ImageView
         android:id="@+id/rectanglegod17"
@@ -61,11 +55,10 @@
         app:srcCompat="@drawable/button_layout" />
 
     <TextView
-        android:id="@+id/absEnd"
+        android:id="@+id/endWorkout"
         android:layout_width="391dp"
         android:layout_height="86dp"
         android:fontFamily="@font/segoe"
-        android:text="ABS WORKOUT"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
@@ -113,15 +106,88 @@
         android:layout_width="233dp"
         android:layout_height="35dp"
         android:fontFamily="@font/segoe"
-        android:text="TOTAL WORKOUTS: 5"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.801" />
+
+    <TextView
+        android:id="@+id/workout1"
+        android:layout_width="233dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/segoe"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <TextView
+        android:id="@+id/workout2"
+        android:layout_width="233dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/segoe"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/workout3"
+        android:layout_width="233dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/segoe"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <TextView
+        android:id="@+id/workout4"
+        android:layout_width="233dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/segoe"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <TextView
+        android:id="@+id/workout5"
+        android:layout_width="233dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/segoe"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

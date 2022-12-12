@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.415"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/chestwork1"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -53,7 +53,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/chestwork2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.645"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/chestwork3"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.759"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/chestwork4"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -104,33 +104,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.873"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/chestwork5"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/chestStartButt"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="688dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#203864"
         android:text="START"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView52" />
 
     <TextView
         android:id="@+id/textView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoe"
-        android:text="8-12 REPS"
+        android:text="12 REPS"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.314"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.426" />
@@ -172,13 +172,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoe"
-        android:text="8-12 REPS"
+        android:text="12 REPS"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.742" />
@@ -204,7 +204,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="DIPS"
+        android:text="SEATED CHEST FLY"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -220,9 +220,9 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="DEADLIFTS"
+        android:text="INCLINE DUMBBELL PRESS"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -236,9 +236,9 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="BARBELL ROWS"
+        android:text="DUMBBELL CLOSE GRIP PRESS"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -252,7 +252,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="T-BAR ROW"
+        android:text="DUMBBELL BENCH PRESS"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -268,7 +268,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="LAT PULL DOWN"
+        android:text="CABLE CROSSOVER"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"

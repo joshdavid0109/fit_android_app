@@ -40,11 +40,11 @@ public class WorkoutTimer extends AppCompatActivity {
     String[] armExercises = {"REVERSE CURLS", "SKULL CRUSHERS",
             "SEATED WRIST CURLS", "TATE PRESS", "TWISTING DUMBBELL CURL"};
 
-    String[] backExercises = {"BARBELL BENT OVER ROW", "CHEST SUPPORTED DUMBBELL ROW",
-            "DUMBBELL SINGLE ARM ROW", "SINGLE ARM T BAR ROWS", "LAT PULLDOWN"};
+    String[] backExercises = {"LAT PULLDOWN", "BARBELL ROWS",
+            "SINGLE ARM ROWS", "SINGLE ARMS T-BAR ROWS", "DEADLIFT"};
 
     String[] chestExercises = {"CABLE CROSSOVER", "DUMBBELL BENCH PRESS",
-            "DUMBBELL CLOSE GRIP PRESS", "INCLINE D     UMBBELL PRESS", "SEATED CHEST FLY"};
+            "DUMBBELL CLOSE GRIP PRESS", "INCLINE DUMBBELL PRESS", "SEATED CHEST FLY"};
 
     String[] legsExercises = {"BARBELL SQUAT", "BULGARIAN SPLIT SQUAT",
             "HAMSTRING CURLS", "LEG EXTENSION", "CALF RAISE"};
@@ -89,7 +89,7 @@ public class WorkoutTimer extends AppCompatActivity {
             R.drawable.armexercise4, R.drawable.armexercise5};
 
     int[] backGifs = {R.drawable.backexercise1, R.drawable.backexercise2, R.drawable.backexercise3,
-            R.drawable.backexercise4, R.drawable.backexcercise5};
+            R.drawable.backexercise4, R.drawable.backexercise5};
 
     int[] chestGifs = {R.drawable.chestexercise1, R.drawable.chestexercise2, R.drawable.chestexercise3,
             R.drawable.chestexercise4, R.drawable.chestexercise5};
@@ -121,6 +121,9 @@ public class WorkoutTimer extends AppCompatActivity {
 
         timeranim = AnimationUtils.loadAnimation(this, R.anim.timeranim);
 
+        System.out.println("Launch state is: " + launchState);
+        System.out.println("Report Code Abs = " + reportCodeAbs);
+
         /*
         Launch States
 
@@ -129,16 +132,17 @@ public class WorkoutTimer extends AppCompatActivity {
         Back = [3]
         Chest = [4]
         Legs = [5]
+        Shoulder = [6]
          */
 
         switch (launchState) {
             case 1:
-                    if (reportCodeAbs == 0) {
-                        abExercisesTextView.setText(abExercises[currentAbExercise]);
-                        abRepsTextView.setText(abRep[currentAbRep]);
-                        abGifView.setImageResource(abGifs[currentImage]);
-            }
-                    break;
+                if (reportCodeAbs == 0) {
+                    abExercisesTextView.setText(abExercises[currentAbExercise]);
+                    abRepsTextView.setText(abRep[currentAbRep]);
+                    abGifView.setImageResource(abGifs[currentImage]);
+                }
+                break;
 
             case 2:
                 if (reportCodeArms == 0) {
@@ -196,7 +200,7 @@ public class WorkoutTimer extends AppCompatActivity {
             abRepsTextView.setText(abRep[currentAbRep]);
             abGifView.setImageResource(abGifs[currentImage]);
 
-        } else if (reportCodeArms != 0){
+        } else if (reportCodeArms != 0) {
             currentAbExercise++;
             currentAbRep++;
             currentImage++;
@@ -276,23 +280,22 @@ public class WorkoutTimer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // If report code == 4, workout has ended
-                if (reportCodeAbs == 4) {
+                if (reportCodeAbs < 4) {
                     reportCodeAbs = 0; //initialize report code back to 0
                     GoToTimerEnd();
-                }
-                else if (reportCodeArms == 4) {
+                } else if (reportCodeArms < 4) {
                     reportCodeArms = 0;
                     GoToTimerEnd();
-                } else if (reportCodeBack == 4) {
+                } else if (reportCodeBack < 4) {
                     reportCodeBack = 0;
                     GoToTimerEnd();
-                } else if (reportCodeChest == 4) {
+                } else if (reportCodeChest < 4) {
                     reportCodeChest = 0;
                     GoToTimerEnd();
-                } else if (reportCodeLegs == 4) {
+                } else if (reportCodeLegs < 4) {
                     reportCodeLegs = 0;
                     GoToTimerEnd();
-                } else if (reportCodeShoulder == 4) {
+                } else if (reportCodeShoulder < 4) {
                     reportCodeShoulder = 0;
                     GoToTimerEnd();
                 }

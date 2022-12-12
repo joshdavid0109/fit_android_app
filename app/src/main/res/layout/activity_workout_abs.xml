@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#404040"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="1dp">
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:fillViewport="true"
+        android:background="#404040"
         tools:context=".WorkoutAbs">
 
 
@@ -105,7 +99,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.53"
-            app:srcCompat="@drawable/abswork1"
+            app:srcCompat="@drawable/abswork2"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -122,7 +116,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.645"
-            app:srcCompat="@drawable/abswork1"
+            app:srcCompat="@drawable/abswork3"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -139,7 +133,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.759"
-            app:srcCompat="@drawable/abswork1"
+            app:srcCompat="@drawable/abswork4"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -156,7 +150,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.873"
-            app:srcCompat="@drawable/abswork1"
+            app:srcCompat="@drawable/abswork5"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -336,18 +330,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.846" />
 
-        <Button
-            android:id="@+id/absStartButt"
-            android:layout_width="180dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="688dp"
-            android:backgroundTint="#203864"
-            android:text="START"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/absStartButt"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#203864"
+        android:text="START"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

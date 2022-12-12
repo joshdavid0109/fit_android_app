@@ -117,8 +117,8 @@
 
     <ImageView
         android:id="@+id/timericanchor"
-        android:layout_width="300dp"
-        android:layout_height="346dp"
+        android:layout_width="282dp"
+        android:layout_height="301dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

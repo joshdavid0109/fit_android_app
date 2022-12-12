@@ -76,13 +76,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoe"
-        android:text="12 REPS"
+        android:text="8-10 REPS"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.846" />
@@ -91,13 +91,13 @@
         android:id="@+id/startBackWorkout"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="688dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#203864"
         android:text="START"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
     <ImageButton
         android:id="@+id/absWorkButt5"
@@ -113,7 +113,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.873"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/backwork5"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -121,7 +121,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="DIPS"
+        android:text="DEADLIFTS"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -146,7 +146,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.759"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/backwork4"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -154,7 +154,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="DEADLIFTS"
+        android:text="SINGLE ARM T-BAR ROW"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -179,7 +179,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.645"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/backwork3"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -187,7 +187,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="BARBELL ROWS"
+        android:text="SINGLE ARM ROWS"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -212,7 +212,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/backwork2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -220,7 +220,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="T-BAR ROW"
+        android:text="BARBELL ROWS"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -245,7 +245,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.415"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/backwork1"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView

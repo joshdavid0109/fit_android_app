@@ -1,6 +1,7 @@
 package com.example.gymprogs2224514;
 
 import androidx.appcompat.app.AppCompatActivity;
+import static com.example.gymprogs2224514.MainActivity.mainActivityStatus;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +20,12 @@ public class ViewAllProgramsHIIT extends AppCompatActivity {
         backButt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               BackToViewAll();
+
+                if (mainActivityStatus > 1) {
+                    BackToViewAll();
+                } else
+                    BackToMainActivity();
+
             }
 
         });
@@ -27,6 +33,14 @@ public class ViewAllProgramsHIIT extends AppCompatActivity {
 
     public void BackToViewAll() {
         Intent intent = new Intent(this,ViewAllProgramsActivity.class);
+        mainActivityStatus = 0;
+        startActivity(intent);
+    }
+
+    public void BackToMainActivity() {
+        Intent intent = new Intent(this,MainActivity.class);
+        // Reset mainActivityStatus
+        mainActivityStatus = 0;
         startActivity(intent);
     }
 }

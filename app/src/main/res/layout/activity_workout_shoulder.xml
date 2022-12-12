@@ -12,7 +12,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="BARBELL ROWS"
+        android:text="LATERAL RAISE"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -44,7 +44,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="T-BAR ROW"
+        android:text="DUMBBELL FRONT RAISE"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -76,13 +76,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/segoe"
-        android:text="8-12 REPS"
+        android:text="12 REPS"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.317"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.426" />
@@ -92,7 +92,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="LAT PULL DOWN"
+        android:text="BENT OVER REVERSE FLY"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -107,13 +107,13 @@
         android:id="@+id/shoulderStartButt"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="688dp"
+        android:layout_marginTop="48dp"
         android:backgroundTint="#203864"
         android:text="START"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView72" />
 
     <TextView
         android:id="@+id/textView72"
@@ -136,9 +136,9 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="DIPS"
+        android:text="SEATED SHOULDER PRESS"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18.5sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,7 +168,7 @@
         android:layout_width="236dp"
         android:layout_height="21dp"
         android:fontFamily="@font/segoe"
-        android:text="DEADLIFTS"
+        android:text="MILITARY PRESS"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -204,7 +204,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.415"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/shoulderwork1"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -221,7 +221,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.53"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/shoulderwork2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -238,7 +238,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.645"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/shoulderwork3"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -255,7 +255,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.759"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/shoulderwork4"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
@@ -272,7 +272,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.873"
-        app:srcCompat="@drawable/abswork1"
+        app:srcCompat="@drawable/shoulderwork5"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton

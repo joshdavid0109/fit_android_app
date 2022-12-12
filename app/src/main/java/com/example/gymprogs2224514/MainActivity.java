@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    static int mainActivityStatus = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         ImageButton backWorkButt = findViewById(R.id.backWorkButt);
         ImageButton legsWorkButt = findViewById(R.id.legsWorkButt);
         ImageButton armsWorkButt = findViewById(R.id.armsWorkButt);
-
 
         viewAllButt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToMainProgram() {
         Intent intent = new Intent(this, ViewAllProgramsHIIT.class);
+        mainActivityStatus++;
         startActivity(intent);
     }
 

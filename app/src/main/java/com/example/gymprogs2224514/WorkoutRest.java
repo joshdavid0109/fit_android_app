@@ -15,16 +15,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 public class WorkoutRest extends AppCompatActivity {
 
-    long restDuration = TimeUnit.MINUTES.toMillis(1);
+
+    Animation timeranimrest;
+    ImageView timericanchorrest;
+    private CountDownTimer countDownTimer;
+    private int remainingTime = 30;
 
     // Initialize next exercises
     String[] abExercises = {"RUSSIAN TWISTS",
@@ -33,8 +36,8 @@ public class WorkoutRest extends AppCompatActivity {
     String[] armExercises = {"SKULL CRUSHERS",
             "SEATED WRIST CURLS", "TATE PRESS", "TWISTING DUMBBELL CURL"};
 
-    String[] backExercises = {"CHEST SUPPORTED DUMBBELL ROW",
-            "DUMBBELL SINGLE ARM ROW", "SINGLE ARM T BAR ROWS", "LAT PULLDOWN"};
+    String[] backExercises = { "BARBELL ROWS",
+            "SINGLE ARM ROWS", "SINGLE ARMS T-BAR ROWS", "DEADLIFT"};
 
     String[] chestExercises = {"DUMBBELL BENCH PRESS",
             "DUMBBELL CLOSE GRIP PRESS", "INCLINE DUMBBELL PRESS", "SEATED CHEST FLY"};
@@ -56,61 +59,79 @@ public class WorkoutRest extends AppCompatActivity {
         timer = findViewById(R.id.timer30Second);
         nextWorkout = findViewById(R.id.nextWorkout);
         nextAbsExercise = findViewById(R.id.nextAbsExercise);
+        timericanchorrest = findViewById(R.id.timeranchorrest);
+
+        timeranimrest = AnimationUtils.loadAnimation(this, R.anim.timeranim);
+        timericanchorrest.startAnimation(timeranimrest);
 
         switch (launchState) {
             case 1:
-                nextAbsExercise.setText(abExercises[currentAbExercise]);
+                if (currentAbExercise != 4) {
+                    nextAbsExercise.setText(abExercises[currentAbExercise]);
+                }
+
                 break;
 
             case 2:
-                nextAbsExercise.setText(armExercises[currentAbExercise]);
-                break;
+                if (currentAbExercise != 4) {
+                    nextAbsExercise.setText(armExercises[currentAbExercise]);
+                    break;
+
+                }
 
             case 3:
-                nextAbsExercise.setText(backExercises[currentAbExercise]);
-                break;
+                if (currentAbExercise != 4) {
+                    nextAbsExercise.setText(backExercises[currentAbExercise]);
+                    break;
+                }
 
             case 4:
-                nextAbsExercise.setText(chestExercises[currentAbExercise]);
-                break;
+                if (currentAbExercise != 4) {
+                    nextAbsExercise.setText(chestExercises[currentAbExercise]);
+                    break;
+                }
+
 
             case 5:
-                nextAbsExercise.setText(legsExercises[currentAbExercise]);
-                break;
+                if (currentAbExercise != 4) {
+                    nextAbsExercise.setText(legsExercises[currentAbExercise]);
+                    break;
+                }
+
 
             case 6:
-                nextAbsExercise.setText(shoulderExercises[currentAbExercise]);
-                break;
+                if (currentAbExercise != 4) {
+                    nextAbsExercise.setText(shoulderExercises[currentAbExercise]);
+                    break;
+                }
+
 
         }
 
-
-        new CountDownTimer(restDuration, 1000) {
+        countDownTimer = new CountDownTimer(30000, 1000) {
             @Override
-            public void onTick(long l) {
+            public void onTick(long milliUntilDone) {
+                remainingTime = (int) milliUntilDone / 1000;
+                timer.setText(String.valueOf(remainingTime));
 
-                // Convert Millisecond to minute and seconds
-                String sDuration = String.format(Locale.ENGLISH, "%02d : %02d",
-                        TimeUnit.MILLISECONDS.toMinutes(1),
-                        TimeUnit.MILLISECONDS.toSeconds(1) - TimeUnit.MINUTES.toSeconds
-                                (TimeUnit.MILLISECONDS.toMinutes(1)));
-
-                timer.setText(sDuration);
             }
 
             @Override
             public void onFinish() {
-                timer.setVisibility(View.GONE);
-
-                Toast.makeText(getApplicationContext()
-                        , "Rest has ended", Toast.LENGTH_LONG).show();
+                timer.setText("REST FINISHED");
             }
-        }.start();
+        };
+
+        countDownTimer.start();
 
         nextWorkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GoBackToWorkoutTimer();
+                if (currentAbExercise != 4) {
+                    GoBackToWorkoutTimer();
+                } else {
+                    GoToTimerEnd();
+                }
             }
         });
     }
@@ -156,6 +177,10 @@ public class WorkoutRest extends AppCompatActivity {
                 break;
         }
 
+    }
 
+    public void GoToTimerEnd() {
+        Intent intent = new Intent(this, WorkoutTimerEnd.class);
+        startActivity(intent);
     }
 }
