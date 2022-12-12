@@ -12,24 +12,36 @@ import static com.example.gymprogs2224514.WorkoutTimer.reportCodeLegs;
 import static com.example.gymprogs2224514.WorkoutTimer.reportCodeShoulder;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.concurrent.TimeUnit;
+
+import nl.dionsegijn.konfetti.core.Party;
+import nl.dionsegijn.konfetti.core.PartyFactory;
+import nl.dionsegijn.konfetti.core.emitter.Emitter;
+import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
+import nl.dionsegijn.konfetti.core.models.Shape;
+import nl.dionsegijn.konfetti.xml.KonfettiView;
+
 public class WorkoutTimerEnd extends AppCompatActivity {
 
+    KonfettiView celebrationView = null;
+    Shape.DrawableShape drawableShape = null;
     ImageView endWorkoutPic;
     Button absBackToMenu;
     TextView endWorkoutText;
     TextView workout1, workout2, workout3, workout4, workout5;
 
-    String[] endWorkouts = {"ABS WORKOUT", "ARMS WORKOUT", "BACK WORKOUT" ,
-    "CHEST WORKOUT", "LEGS WORKOUT", "SHOULDER WORKOUT"};
+    String[] endWorkouts = {"ABS WORKOUT", "ARMS WORKOUT", "BACK WORKOUT",
+            "CHEST WORKOUT", "LEGS WORKOUT", "SHOULDER WORKOUT"};
 
     String[] abExercises = {"ABDOMINAL CRUNCHES", "RUSSIAN TWISTS",
             "MOUNTAIN CLIMBERS", "LEG RAISES", "PLANK"};
@@ -57,6 +69,7 @@ public class WorkoutTimerEnd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_timer_end);
 
+
         absBackToMenu = findViewById(R.id.absBackToMenu);
         endWorkoutText = findViewById(R.id.endWorkout);
         endWorkoutPic = findViewById(R.id.endWorkoutPic);
@@ -66,6 +79,22 @@ public class WorkoutTimerEnd extends AppCompatActivity {
         workout4 = findViewById(R.id.workout4);
         workout5 = findViewById(R.id.workout5);
         System.out.println("Launch state is: " + launchState);
+
+        final Drawable drawable = ContextCompat.getDrawable(getApplicationContext(),
+                R.drawable.ic_android_black_24dp);
+        drawableShape = new Shape.DrawableShape(drawable, true);
+        celebrationView = findViewById(R.id.celebrationEnd);
+        EmitterConfig emitterConfig = new Emitter(5L, TimeUnit.SECONDS).perSecond(50);
+        Party party = new PartyFactory(emitterConfig)
+                .angle(270)
+                .spread(90)
+                .setSpeedBetween(1f, 5f)
+                .timeToLive(2000L)
+                .shapes(new Shape.Rectangle(0.2f), drawableShape)
+                .position(0.0, 0.0, 1.0, 1.0)
+                .build();
+
+        celebrationView.start(party);
 
         switch (launchState) {
             case 1:
@@ -159,6 +188,6 @@ public class WorkoutTimerEnd extends AppCompatActivity {
         reportCodeChest = 0;
         reportCodeLegs = 0;
         reportCodeShoulder = 0;
-    startActivity(intent);
+        startActivity(intent);
     }
 }

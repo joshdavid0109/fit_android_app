@@ -7,6 +7,18 @@
     android:background="#404040"
     tools:context=".WorkoutTimerEnd">
 
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/celebrationEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/endWorkoutPic"
         android:layout_width="454dp"
