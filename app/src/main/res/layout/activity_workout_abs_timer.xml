@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/timericanchor"
+        app:layout_constraintTop_toTopOf="@+id/workoutsTimerAnchor"
         app:layout_constraintVertical_bias="0.858" />
 
     <ImageView
@@ -116,7 +116,7 @@
         app:srcCompat="@drawable/timercircle" />
 
     <ImageView
-        android:id="@+id/timericanchor"
+        android:id="@+id/workoutsTimerAnchor"
         android:layout_width="282dp"
         android:layout_height="301dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -37,8 +37,7 @@ public class WorkoutTimerEnd extends AppCompatActivity {
     Shape.DrawableShape drawableShape = null;
     ImageView endWorkoutPic;
     Button absBackToMenu;
-    TextView endWorkoutText;
-    TextView workout1, workout2, workout3, workout4, workout5;
+    TextView endWorkoutText, workout1, workout2, workout3, workout4, workout5;
 
     String[] endWorkouts = {"ABS WORKOUT", "ARMS WORKOUT", "BACK WORKOUT",
             "CHEST WORKOUT", "LEGS WORKOUT", "SHOULDER WORKOUT"};
@@ -49,11 +48,11 @@ public class WorkoutTimerEnd extends AppCompatActivity {
     String[] armExercises = {"REVERSE CURLS", "SKULL CRUSHERS",
             "SEATED WRIST CURLS", "TATE PRESS", "TWISTING DUMBBELL CURL"};
 
-    String[] backExercises = {"BARBELL BENT OVER ROW", "CHEST SUPPORTED DUMBBELL ROW",
-            "DUMBBELL SINGLE ARM ROW", "SINGLE ARM T BAR ROWS", "LAT PULLDOWN"};
+    String[] backExercises = {"LAT PULLDOWN", "BARBELL ROWS",
+            "SINGLE ARM ROWS", "SINGLE ARMS T-BAR ROWS", "DEADLIFT"};
 
     String[] chestExercises = {"CABLE CROSSOVER", "DUMBBELL BENCH PRESS",
-            "DUMBBELL CLOSE GRIP PRESS", "INCLINE D     UMBBELL PRESS", "SEATED CHEST FLY"};
+            "DUMBBELL CLOSE GRIP PRESS", "INCLINE DUMBBELL PRESS", "SEATED CHEST FLY"};
 
     String[] legsExercises = {"BARBELL SQUAT", "BULGARIAN SPLIT SQUAT",
             "HAMSTRING CURLS", "LEG EXTENSION", "CALF RAISE"};
@@ -179,6 +178,7 @@ public class WorkoutTimerEnd extends AppCompatActivity {
     public void AbsBackToMainMenu() {
         Intent intent = new Intent(this, MainActivity.class);
         // Reset count back to 0, when going back to main menu
+        launchState = 0;
         currentAbExercise = 0;
         currentImage = 0;
         currentAbRep = 0;

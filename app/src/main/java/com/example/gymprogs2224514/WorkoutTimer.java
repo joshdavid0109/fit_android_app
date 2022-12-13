@@ -106,7 +106,7 @@ public class WorkoutTimer extends AppCompatActivity {
         setContentView(R.layout.activity_workout_abs_timer);
 
         // Exercises, GIF and Reps
-        // Abs
+
         abExercisesTextView = findViewById(R.id.absExcerciseText);
         abRepsTextView = findViewById(R.id.absReps);
         abGifView = findViewById(R.id.abGifView);
@@ -114,7 +114,7 @@ public class WorkoutTimer extends AppCompatActivity {
         // Back
         startButtAbs1 = findViewById(R.id.startAbsTimer1);
         nextWorkoutButt = findViewById(R.id.nextAbsWorkout);
-        timericanchor = findViewById(R.id.timericanchor);
+        timericanchor = findViewById(R.id.workoutsTimerAnchor);
         timerAbs1 = findViewById(R.id.timerAbs);
 
         nextWorkoutButt.setAlpha(0);

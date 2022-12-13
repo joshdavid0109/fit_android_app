@@ -1,6 +1,8 @@
 package com.example.gymprogs2224514;
 
 import androidx.appcompat.app.AppCompatActivity;
+import static com.example.gymprogs2224514.ViewAllProgramsHIIT.launchStatePrograms;
+import static com.example.gymprogs2224514.WorkoutAbs.launchState;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,10 +14,14 @@ public class MainActivity extends AppCompatActivity {
 
     static int mainActivityStatus = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        launchState = -10;
+        launchStatePrograms = -10;
 
         Button viewAllButt = findViewById(R.id.viewAllButton);
         ImageButton mainProgram = findViewById(R.id.mainProgram);
